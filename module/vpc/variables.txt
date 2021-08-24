@@ -1,0 +1,11 @@
+variable "vpc_cidr" {}
+variable "tennancy" {}
+variable "subnet_cidr" {}
+variable "vpc_id" {}
+variable "public_ip_asgn" {
+    type = bool
+}
+variable "az" {
+    type = string
+
+}
