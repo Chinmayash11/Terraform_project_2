@@ -58,7 +58,7 @@ jobs:
      # run: terraform destroy -auto-approve
 
      - name: ecomm application deploy
-       run: 
+       run: |
        sudo apt -y install apache2
        sudo systemctl start apache2
        sudo systemctl enable apache2
