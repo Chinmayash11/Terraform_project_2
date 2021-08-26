@@ -5,6 +5,7 @@ resource "aws_instance" "my_ec2" {
   vpc_security_group_ids = [var.security_group_id]
   subnet_id              = var.subnet_id
   key_name               = var.key_name
+  user_data              = file("github-action-scripts.sh")
 
   tags = merge(var.tags,
     tomap({
