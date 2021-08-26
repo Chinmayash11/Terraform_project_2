@@ -54,10 +54,10 @@ jobs:
       if: github.ref == 'refs/heads/main' && github.event_name == 'push'
       run: terraform apply -var-file="dev/terraform.tfvars" --auto-approve
       
-  # - name: Terraform Destroy
-     # run: terraform destroy -auto-approve
+    - name: Terraform Destroy
+      run: terraform destroy -var-file="dev/terraform.tfvars" --auto-approve
 
-     - name: ecomm application deploy
-       run: sh ./github-action-scripts.sh
+     #- name: ecomm application deploy
+     #  run: sh ./github-action-scripts.sh
 
 
