@@ -38,7 +38,7 @@ module "my_instance" {
   security_group_id = module.sg[each.value.sg_name_key].security_group.id
   key_name          = module.key_pair.private_key_name     //var.key_name
   ec2_name          = each.value.ec2_name
-  user_data         = file("github-action-scripts.sh")
+  user_data         = file("user_data-scripts.sh")
 
 
   tags = local.common_tags
