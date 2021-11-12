@@ -33,6 +33,6 @@ variable "ec2_name" {
   type = string
 }
 
-variable "user_data" {
-  
-}
+#variable "user_data" {
+#  
+#}
